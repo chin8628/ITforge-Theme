@@ -17,6 +17,10 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/asset/css/reset.css">
+<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/asset/css/bootstrap.css">
+<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/asset/css/style.css">
+
 <?php wp_head(); ?>
 </head>
 
@@ -40,4 +44,4 @@
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+	<div id="content" class="site-content container">

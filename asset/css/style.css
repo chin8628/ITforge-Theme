@@ -1,0 +1,10 @@
+/* Basic structure CSS */
+body{
+    background-image: url('../img/background.png');
+}
+
+.site-content{
+    background-color: white;
+}
+
+/* index css */
