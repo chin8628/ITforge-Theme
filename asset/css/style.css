@@ -7,4 +7,19 @@ body{
     background-color: white;
 }
 
+/* sidebar css */
+.widget-area{
+    float: right;
+}
+
 /* index css */
+
+/* footer css */
+footer{
+    background-color: white;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    padding: 8px;
+    text-align: center;
+}
