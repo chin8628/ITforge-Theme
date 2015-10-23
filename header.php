@@ -31,7 +31,17 @@
 	<header id="masthead" class="site-header" role="banner">
 		<nav class="navbar navbar-default navbar-static-top">
 		  	<div class="container">
-		    	<a href="#" class="navbar-brand"><?php bloginfo( 'name' ); ?></a>
+		    	<a href="/itforge" class="navbar-brand"><?php bloginfo( 'name' ); ?></a>
+		    	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		    		<ul class="nav navbar-nav">
+				    	<?php
+				    		$defaults = array(
+											'echo' => false,
+										);
+				    		echo strip_tags(wp_nav_menu($defaults), '<li><a>');
+				    	?>
+			    	</ul>
+				</div>
 			</div>
 		</nav>
 		<div class="site-branding">
@@ -47,8 +57,7 @@
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'itforge' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
+		</nav>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content container">
