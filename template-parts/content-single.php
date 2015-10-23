@@ -35,3 +35,5 @@
 
 </article><!-- #post-## -->
 
+<hr class="style-eight"></hr>
+
