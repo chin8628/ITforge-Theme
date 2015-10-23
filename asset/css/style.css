@@ -1,6 +1,6 @@
 /* Basic structure CSS */
 body{
-    background-image: url('../img/background.png');
+    background-color: #FFF;
 }
 
 .site-content{
@@ -22,4 +22,10 @@ footer{
     margin-bottom: 15px;
     padding: 8px;
     text-align: center;
+}
+
+/* Article css */
+.entry-header-single{
+    padding-top: 100px;
+    padding-bottom: 30px;
 }
