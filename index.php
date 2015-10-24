@@ -14,12 +14,10 @@
 
 get_header(); ?>
 
+	<?php echo do_shortcode("[metaslider id=25]"); ?>
+
 	<div id="primary" class="content-area container col-md-10 col-md-offset-1">
 		<main id="main" class="site-main" role="main">
-
-		<?php echo do_shortcode("[metaslider id=25]"); ?>
-
-		<?php if ( have_posts() ) : ?>
 
 			<?php if ( is_home() && ! is_front_page() ) : ?>
 				<header>
@@ -27,8 +25,21 @@ get_header(); ?>
 				</header>
 			<?php endif; ?>
 
+			<?php
+				/*
+					fetch list of category into array for display on index
+					$category keep name_slug of category
+				*/
+				$index = 0;
+				$var = get_categories();
+				foreach ($var as $value) {
+					$category[$index] = $value->slug;
+					$category_id[$index] = $value->cat_ID;
+					$index++;
+				}
+			?>
+
 			<?php $count = 0; ?>
-			<?php $category = array('activities', 'news', 'project', 'award'); ?>
 
 			<?php for ($i = 1; $i <= 2; $i++){ ?>
 
@@ -37,7 +48,8 @@ get_header(); ?>
 				<?php for ($j = 1; $j <= 2; $j++){ ?>
 
 				<div class="col-md-6">
-				<?php query_posts( array('category_name' => $category[$count]) ); ?>
+				<?php query_posts( array('category_name' => $category[$count], 'showposts' => 4) ); ?>
+				<h3> <?php single_cat_title() ?> </h3>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<div class="box-article row">
 						<?php if ( has_post_thumbnail() ) : ?>
@@ -45,10 +57,12 @@ get_header(); ?>
 						<?php else: ?>
 							<img src="<?php bloginfo('template_directory'); ?>/asset/img/blank.jpg" />
 						<?php endif; ?>
-						<p> <?php echo get_the_title(); ?> </p>
+						<p><strong> <?php echo get_the_title(); ?> </strong></p>
+						<small><?php the_date(); ?></small>
 					</div>
 				<?php endwhile; ?>
-				<?php the_posts_navigation(); ?>
+				<?php echo '<a href="'. get_category_link( $category_id[$count] ) .'">อ่านต่อ</a>'; ?>
+
 				</div>
 
 				<?php $count++; ?>
@@ -57,12 +71,6 @@ get_header(); ?>
 			</section>
 
 			<?php } ?>
-
-		<?php else : ?>
-
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
-		<?php endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

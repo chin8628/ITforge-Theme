@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'bangna_newregular';
+    src: url('../fonts/bangna-new-webfont.eot');
+    src: url('../fonts/bangna-new-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bangna-new-webfont.woff2') format('woff2'),
+         url('../fonts/bangna-new-webfont.woff') format('woff'),
+         url('../fonts/bangna-new-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Basic structure CSS */
 body{
     background-color: #FFF;
@@ -18,7 +29,7 @@ body{
 }
 
 .box-article{
-    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .box-article img{
@@ -28,8 +39,13 @@ body{
     margin-right: 30px;
 }
 
-.box-article p{
+.box-category h3{
+    font-family: 'bangna_newregular';
+    color: #ef7f24;
+}
 
+.box-category small{
+    color: #666;
 }
 
 /* footer css */
