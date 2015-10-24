@@ -27,21 +27,36 @@ get_header(); ?>
 				</header>
 			<?php endif; ?>
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php
+			<?php $count = 0; ?>
+			<?php $category = array('activities', 'news', 'project', 'award'); ?>
 
-					/*
-					 * Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'template-parts/content', get_post_format() );
-				?>
+			<?php for ($i = 1; $i <= 2; $i++){ ?>
 
-			<?php endwhile; ?>
+			<section class="box-category row">
 
-			<?php the_posts_navigation(); ?>
+				<?php for ($j = 1; $j <= 2; $j++){ ?>
+
+				<div class="col-md-6">
+				<?php query_posts( array('category_name' => $category[$count]) ); ?>
+				<?php while ( have_posts() ) : the_post(); ?>
+					<div class="box-article row">
+						<?php if ( has_post_thumbnail() ) : ?>
+							<?php the_post_thumbnail(); ?>
+						<?php else: ?>
+							<img src="<?php bloginfo('template_directory'); ?>/asset/img/blank.jpg" />
+						<?php endif; ?>
+						<p> <?php echo get_the_title(); ?> </p>
+					</div>
+				<?php endwhile; ?>
+				<?php the_posts_navigation(); ?>
+				</div>
+
+				<?php $count++; ?>
+				<?php } ?>
+
+			</section>
+
+			<?php } ?>
 
 		<?php else : ?>
 
