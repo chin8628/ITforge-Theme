@@ -18,7 +18,15 @@ get_header(); ?>
 
 				<?php get_template_part( 'template-parts/content', 'single' ); ?>
 
-				<?php the_post_navigation(); ?>
+				<h4>บทความที่เกี่ยวข้อง</h4>
+
+				<?php
+					$category = get_the_category();
+					$var = get_posts(array('category_name' => $category[0]->slug));
+					foreach ($var as $value) {
+						echo '<a href="'. get_permalink($value->ID) .'">'. $value->post_title .'</a> <br />';
+					}
+				?>
 
 				<?php
 					// If comments are open or we have at least one comment, load up the comment template.
