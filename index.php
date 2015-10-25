@@ -58,7 +58,7 @@ get_header(); ?>
 							<?php else: ?>
 								<img src="<?php bloginfo('template_directory'); ?>/asset/img/blank.jpg" />
 							<?php endif; ?>
-							<p><strong> <?php echo get_the_title(); ?> </strong></p>
+							<a href="<?php the_permalink(); ?>"><p><strong> <?php echo get_the_title(); ?> </strong></p></a>
 							<small><?php the_date(); ?></small>
 						</div>
 					<?php endwhile; ?>
