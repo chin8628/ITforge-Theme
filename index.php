@@ -47,7 +47,7 @@ get_header(); ?>
 				<?php if ($total_category % 2 != 0 && $i == ceil($total_category / 2)) $var = 1; else $var = 2; ?>
 				<?php for ($j = 1; $j <= $var; $j++){ ?>
 
-				<div class="col-md-6">
+				<div class="col-md-6 index">
 
 					<?php query_posts( array('category_name' => $category[$count], 'showposts' => 4) ); ?>
 					<h3> <?php single_cat_title() ?> </h3>
