@@ -16,14 +16,8 @@ get_header(); ?>
 
 	<?php echo do_shortcode("[metaslider id=25]"); ?>
 
-	<div id="primary" class="content-area container col-md-10 col-md-offset-1">
+	<div id="primary" class="content-area col-md-10 col-md-offset-1">
 		<main id="main" class="site-main" role="main">
-
-			<?php if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-			<?php endif; ?>
 
 			<?php
 				/*
@@ -54,27 +48,30 @@ get_header(); ?>
 				<?php for ($j = 1; $j <= $var; $j++){ ?>
 
 				<div class="col-md-6">
-				<?php query_posts( array('category_name' => $category[$count], 'showposts' => 4) ); ?>
-				<h3> <?php single_cat_title() ?> </h3>
-				<?php while ( have_posts() ) : the_post(); ?>
-					<div class="box-article row">
-						<?php if ( has_post_thumbnail() ) : ?>
-							<?php the_post_thumbnail(); ?>
-						<?php else: ?>
-							<img src="<?php bloginfo('template_directory'); ?>/asset/img/blank.jpg" />
-						<?php endif; ?>
-						<p><strong> <?php echo get_the_title(); ?> </strong></p>
-						<small><?php the_date(); ?></small>
-					</div>
-				<?php endwhile; ?>
-				<?php echo '<a href="'. get_category_link( $category_id[$count] ) .'">อ่านต่อ</a>'; ?>
+
+					<?php query_posts( array('category_name' => $category[$count], 'showposts' => 4) ); ?>
+					<h3> <?php single_cat_title() ?> </h3>
+					<?php while ( have_posts() ) : the_post(); ?>
+						<div class="box-article row">
+							<?php if ( has_post_thumbnail() ) : ?>
+								<?php the_post_thumbnail(); ?>
+							<?php else: ?>
+								<img src="<?php bloginfo('template_directory'); ?>/asset/img/blank.jpg" />
+							<?php endif; ?>
+							<p><strong> <?php echo get_the_title(); ?> </strong></p>
+							<small><?php the_date(); ?></small>
+						</div>
+					<?php endwhile; ?>
+					<?php echo '<a href="'. get_category_link( $category_id[$count] ) .'">อ่านต่อ</a>'; ?>
+
+					<hr class="bold"></hr>
 
 				</div>
 
 				<?php $count++; ?>
 				<?php } ?>
 
-			</section>
+			</section><!-- end category box -->
 
 			<?php } ?>
 
