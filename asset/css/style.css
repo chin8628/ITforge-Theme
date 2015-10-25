@@ -11,7 +11,12 @@
 
 /* Basic structure CSS */
 body{
+    height: 100%;
     background-color: #FFF;
+}
+
+h1.bangna{
+    font-family: 'bangna_newregular';
 }
 
 .site-content{
