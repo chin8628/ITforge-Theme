@@ -31,21 +31,27 @@ get_header(); ?>
 					$category keep name_slug of category
 				*/
 				$index = 0;
-				$var = get_categories();
+				$var = get_categories('orderby=slug');
 				foreach ($var as $value) {
 					$category[$index] = $value->slug;
 					$category_id[$index] = $value->cat_ID;
 					$index++;
 				}
+
+				//$total_category keep total number of category
+				$exploded = explode('<br />', wp_list_categories('title_li=&style=none&echo=0&depth=1'));
+				$total_category = count($exploded) - 1;
+
 			?>
 
 			<?php $count = 0; ?>
 
-			<?php for ($i = 1; $i <= 2; $i++){ ?>
+			<?php for ($i = 1; $i <= ceil($total_category / 2); $i++){ ?>
 
 			<section class="box-category row">
 
-				<?php for ($j = 1; $j <= 2; $j++){ ?>
+				<?php if ($total_category % 2 != 0 && $i == ceil($total_category / 2)) $var = 1; else $var = 2; ?>
+				<?php for ($j = 1; $j <= $var; $j++){ ?>
 
 				<div class="col-md-6">
 				<?php query_posts( array('category_name' => $category[$count], 'showposts' => 4) ); ?>
