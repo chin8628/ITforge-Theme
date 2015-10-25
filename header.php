@@ -35,9 +35,7 @@
 		    	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		    		<ul class="nav navbar-nav">
 				    	<?php
-				    		$defaults = array(
-											'echo' => false,
-										);
+				    		$defaults = array('echo' => false);
 				    		echo strip_tags(wp_nav_menu($defaults), '<li><a>');
 				    	?>
 			    	</ul>
