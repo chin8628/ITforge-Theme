@@ -50,11 +50,11 @@ body{
 
 /* footer css */
 footer{
-    background-color: white;
+    background-color: #666;
+    color: #AAA;
     height: 40px;
     margin-top: 20px;
-    margin-bottom: 15px;
-    padding: 8px;
+    padding-top: 8px;
     text-align: center;
 }
 
