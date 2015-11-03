@@ -12,15 +12,65 @@
 /* Basic structure CSS */
 body{
     height: 100%;
-    background-color: #FFF;
+    background-color: #EEE;
+}
+
+#primary{
+    margin-top: 15px;
+    background-color: white;
+    border: 1px;
+}
+
+#main{
+    background-color: white;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#logo{
+    height: 30px;
+    margin-top: -7px;
 }
 
 h1.bangna{
     font-family: 'bangna_newregular';
 }
 
-.site-content{
+.content-area{
     background-color: white;
+    -webkit-box-shadow: 0px 2px 2px 1px #999;
+    -moz-box-shadow: 0px 2px 2px 1px #999;
+    box-shadow: 0px 2px 2px 1px #999;
+}
+
+.menu{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.navbar{
+    background-color: #ef7f24;
+}
+
+.navbar-default .navbar-brand {
+    margin-left: 0;
+    background-color: white;
+}
+
+.navbar-default .navbar-brand:hover{
+    background-color: white;
+}
+
+.navbar-default .navbar-nav {
+    color: white;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #EEE;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: #999;
 }
 
 /* sidebar css */
@@ -40,6 +90,7 @@ h1.bangna{
 .index .box-article img{
     float: left;
     margin-right: 20px;
+    margin-left: 15px;
 }
 
 .box-article img{
@@ -55,6 +106,13 @@ h1.bangna{
 
 .box-category small{
     color: #666;
+}
+
+.slider{
+    padding: 0;
+    -webkit-box-shadow: 0px 2px 2px 1px #999;
+    -moz-box-shadow: 0px 2px 2px 1px #999;
+    box-shadow: 0px 2px 2px 1px #999;
 }
 
 /* footer css */
