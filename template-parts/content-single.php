@@ -11,6 +11,8 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+	<?php //the_post_thumbnail( ); ?>
+
 	<header class="entry-header-single">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
@@ -34,6 +36,4 @@
 	</footer><!-- .entry-footer -->
 
 </article><!-- #post-## -->
-
-<hr class="style-eight"></hr>
 
