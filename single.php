@@ -9,14 +9,16 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area col-md-8 col-md-offset-2 container">
 		<main id="main" class="site-main" role="main">
 
-		<section class="container col-md-8 col-md-offset-2">
+		<section class="container col-md-12">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'template-parts/content', 'single' ); ?>
+
+				<hr class="style-eight"></hr>
 
 				<h4>บทความที่เกี่ยวข้อง</h4>
 
@@ -27,6 +29,8 @@ get_header(); ?>
 						echo '<a href="'. get_permalink($value->ID) .'">'. $value->post_title .'</a> <br />';
 					}
 				?>
+
+				<hr class="style-eight"></hr>
 
 				<?php
 					// If comments are open or we have at least one comment, load up the comment template.
