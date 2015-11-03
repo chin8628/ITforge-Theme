@@ -66,14 +66,14 @@ get_header(); ?>
 					<?php endwhile; ?>
 					<?php echo '<a href="'. get_category_link( $category_id[$count] ) .'">อ่านต่อ</a>'; ?>
 
-					<hr class="bold"></hr>
-
 				</div>
 
 				<?php $count++; ?>
 				<?php } ?>
 
 			</section><!-- end category box -->
+
+			<hr class="bold"></hr>
 
 			<?php } ?>
 
