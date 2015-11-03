@@ -19,6 +19,7 @@ body{
     margin-top: 15px;
     background-color: white;
     border: 1px;
+    padding-bottom: 20px;
 }
 
 #main{
@@ -48,11 +49,11 @@ h1.bangna{
     margin-bottom: 10px;
 }
 
-.navbar{
+.navbar-default{
     background-color: #ef7f24;
 }
 
-.navbar-default .navbar-brand {
+.navbar-brand {
     margin-left: 0;
     background-color: white;
 }
@@ -127,7 +128,7 @@ footer.site-footer{
 
 /* Article css */
 .entry-header-single{
-    padding-top: 100px;
+    padding-top: 30px;
     padding-bottom: 30px;
 }
 
