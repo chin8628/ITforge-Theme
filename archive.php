@@ -42,11 +42,11 @@ get_header(); ?>
 						<p>
 						<?php
 							$content = get_the_content();
-							$limit = 300;
+							$limit = 500;
 							if (strlen($content) >= $limit) {
 								$content = substr($content, 0, $limit);
 								//ensure it will return string that isn't a fu*k string
-								echo substr($content, 0, strrpos($content, ' '));
+								echo substr($content, 0, strrpos($content, ' ')) . "...";
 							}
 						?>
 						</p>
@@ -57,7 +57,17 @@ get_header(); ?>
 
 				<?php endwhile; ?>
 
-			<?php the_posts_navigation(); ?>
+			<p class="text-center">
+			<?php
+			 	$args = array(
+					'prev_text'          => __('« หน้าก่อนหน้านี้'),
+					'next_text'          => __('หน้าต่อไป »'),
+					'end_size'           => 3,
+					'mid_size'           => 4
+				);
+				echo paginate_links( $args );
+			?>
+			</p>
 
 		<?php else : ?>
 
