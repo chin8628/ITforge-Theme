@@ -73,7 +73,9 @@ get_header(); ?>
 
 			</section><!-- end category box -->
 
-			<hr class="bold"></hr>
+			<?php if ($i != ceil($total_category / 2)){ ?>
+				<hr class="bold"></hr>
+			<?php } ?>
 
 			<?php } ?>
 			<?php require('footer-content.php'); ?>
