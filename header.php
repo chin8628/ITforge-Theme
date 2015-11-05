@@ -45,7 +45,7 @@
 		</nav>
 		-->
 
-		<div class="menu container col-md-8 col-md-offset-2">
+		<div class="menu col-md-8 col-md-offset-2">
 			<nav class="navbar navbar-default navbar-static-top">
 			  	<div>
 			  		<?php //bloginfo( 'name' ); ?>
