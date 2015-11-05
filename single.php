@@ -22,13 +22,15 @@ get_header(); ?>
 
 				<h4>บทความที่เกี่ยวข้อง</h4>
 
+				<p class="container">
 				<?php
 					$category = get_the_category();
-					$var = get_posts(array('category_name' => $category[0]->slug));
+					$var = get_posts(array('category_name' => $category[0]->slug, 'posts_per_page' => 4));
 					foreach ($var as $value) {
 						echo '<a href="'. get_permalink($value->ID) .'">'. $value->post_title .'</a> <br />';
 					}
 				?>
+				</p>
 
 				<hr class="style-eight"></hr>
 
