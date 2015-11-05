@@ -48,7 +48,6 @@
 		<div class="menu col-md-8 col-md-offset-2">
 			<nav class="navbar navbar-default navbar-static-top">
 			  	<div>
-			  		<?php //bloginfo( 'name' ); ?>
 			    	<a href="/itforge" class="navbar-brand"><img id="logo" src="<?php bloginfo('template_directory'); ?>/asset/img/logo.png"></a>
 			    	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			    		<ul class="nav navbar-nav">
