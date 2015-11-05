@@ -11,8 +11,8 @@
 
 ?>
 
-<footer id="colophon" class="site-footer" role="contentinfo">
-    <hr class="bold"></hr>
+<footer id="colophon" class="site-footer col-md-12" role="contentinfo">
+    <hr class="bold">
     <div class="site-info credit">
         <span>
             Theme <strong>ITforge</strong>
