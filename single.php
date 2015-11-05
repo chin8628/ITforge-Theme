@@ -47,6 +47,8 @@ get_header(); ?>
 
 		</section>
 
+		<?php require('footer-content.php'); ?>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

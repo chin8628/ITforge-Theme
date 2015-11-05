@@ -30,6 +30,8 @@ get_header(); ?>
 
 			<?php endwhile; // End of the loop. ?>
 
+			<?php require('footer-content.php'); ?>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

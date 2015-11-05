@@ -75,6 +75,8 @@ get_header(); ?>
 
 		<?php endif; ?>
 
+		<?php require('footer-content.php'); ?>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

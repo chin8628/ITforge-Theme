@@ -76,6 +76,7 @@ get_header(); ?>
 			<hr class="bold"></hr>
 
 			<?php } ?>
+			<?php require('footer-content.php'); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
