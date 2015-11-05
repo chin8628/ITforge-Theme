@@ -45,11 +45,10 @@ h1.bangna{
 }
 
 .navbar-default{
-    background-color: #ef7f24;
-    -webkit-box-shadow: 0px 1px 2px 1px #999;
-    -moz-box-shadow: 0px 1px 2px 1px #999;
-    box-shadow: 0px 1px 2px 1px #999;
-    border-style: none;
+    background-color: white;
+    border: 1px;
+    border-color: #BBB;
+    border-style: solid;
 }
 
 .navbar-brand {
