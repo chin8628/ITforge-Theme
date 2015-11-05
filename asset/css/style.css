@@ -166,3 +166,9 @@ hr.bold {
     max-height: 400px;
     overflow: hidden;
 }
+
+/* page css */
+.page{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
