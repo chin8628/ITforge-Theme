@@ -12,11 +12,12 @@
 ?>
 
 <footer id="colophon" class="site-footer" role="contentinfo">
-    <div class="site-info">
+    <hr class="bold"></hr>
+    <div class="site-info credit">
         <span>
-            <strong><?php bloginfo( 'name' ); ?></strong>
+            Theme <strong>ITforge</strong>
         </span>
-        <p class="text-right credit" style="float: right">
+        <p class="text-right" style="float: right">
             Create by <a href="http://www.cloudian.in.th" rel="designer">Cloudian Studio</a>
         </p>
     </div><!-- .site-info -->
