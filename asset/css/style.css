@@ -138,6 +138,11 @@ h1.bangna{
     padding-bottom: 30px;
 }
 
+.entry-content{
+    font-size: 1.15em;
+    line-height: 1.7em;
+}
+
 hr.style-eight {
     text-align: center;
     border: 0;
