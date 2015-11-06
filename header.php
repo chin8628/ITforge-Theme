@@ -50,12 +50,18 @@
 			  	<div>
 			    	<a href="/itforge" class="navbar-brand"><img id="logo" src="<?php bloginfo('template_directory'); ?>/asset/img/logo.png"></a>
 			    	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			    		<ul class="nav navbar-nav">
 					    	<?php
-					    		$defaults = array('echo' => false);
-					    		echo strip_tags(wp_nav_menu($defaults), '<li><a>');
+					    		require_once('inc/wp_bootstrap_navwalker.php');
+					    		$defaults = array(
+									'container'       => false,
+									'menu_class'      => 'nav navbar-nav',
+									'echo'            => true,
+									'fallback_cb'     => 'wp_page_menu',
+									'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+									'walker'          => new wp_bootstrap_navwalker()
+								);
+					    		wp_nav_menu($defaults);
 					    	?>
-				    	</ul>
 					</div>
 				</div>
 			</nav>
