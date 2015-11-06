@@ -74,7 +74,7 @@ get_header(); ?>
 			</section><!-- end category box -->
 
 			<?php if ($i != ceil($total_category / 2)){ ?>
-				<hr class="bold"></hr>
+				<hr class="bold">
 			<?php } ?>
 
 			<?php } ?>
