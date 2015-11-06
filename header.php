@@ -59,13 +59,6 @@
 								</form>
 				    		</li>
 				    	</ul>
-				    	<!--
-				    	<form class="navbar-form" role="search">
-							<div class="form-group navbar-right">
-						  		<input type="search" class="form-control" placeholder="ค้นหา" name="s">
-							</div>
-						</form>
-						-->
 
 					</div>
 				</div>
