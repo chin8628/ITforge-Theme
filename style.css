@@ -76,6 +76,23 @@ h1.bangna{
     color: #444;
 }
 
+.navbar .navbar-form{
+    margin-right: 15px;
+}
+
+.icon-search{
+    font-size: 20px;
+}
+
+.search-expanding{
+    margin-right: 15px;
+}
+
+.search-expanding > a{
+    padding-top: 14px !important;
+    padding-bottom: 11px !important;
+}
+
 /* sidebar css */
 .widget-area{
     float: right;
