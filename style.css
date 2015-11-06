@@ -80,17 +80,28 @@ h1.bangna{
     margin-right: 15px;
 }
 
-.icon-search{
+/* search in navbar */
+#icon-search{
     font-size: 20px;
 }
 
-.search-expanding{
+#icon-search:hover{
+    cursor:pointer;
+}
+
+#search-expanding{
     margin-right: 15px;
 }
 
-.search-expanding > a{
+#search-expanding > a{
     padding-top: 14px !important;
     padding-bottom: 11px !important;
+}
+
+#search-input{
+    display: none;
+    overflow: hidden;
+    width: 0px;
 }
 
 /* sidebar css */

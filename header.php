@@ -48,10 +48,15 @@
 				    		wp_nav_menu($defaults);
 				    	?>
 				    	<ul class="nav navbar-nav navbar-right">
-				    		<li class="search-expanding">
-				    			<a href="#">
-				    				<span class="glyphicon glyphicon-search icon-search" aria-hidden="true"></span>
+				    		<li id="search-expanding">
+				    			<a id="icon-search">
+				    				<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 				    			</a>
+				    			<form class="navbar-form" role="search" id="search-input">
+									<div class="form-group navbar-right">
+								  		<input type="search" class="form-control" placeholder="ค้นหา" name="s">
+									</div>
+								</form>
 				    		</li>
 				    	</ul>
 				    	<!--
