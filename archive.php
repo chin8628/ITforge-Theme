@@ -46,7 +46,7 @@ get_header(); ?>
 							if (strlen($content) >= $limit) {
 								$content = substr($content, 0, $limit);
 								//ensure it will return string that isn't a fu*k string
-								echo strip_tags(substr($content, 0, strrpos($content, ' ')) . ".....");
+								echo strip_tags(substr($content, 0, strrpos($content, ' ')) . " [...]");
 							}
 						?>
 						</p>
