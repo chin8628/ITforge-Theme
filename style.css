@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'bangna_newregular';
-    src: url('../fonts/bangna-new-webfont.eot');
-    src: url('../fonts/bangna-new-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/bangna-new-webfont.woff2') format('woff2'),
-         url('../fonts/bangna-new-webfont.woff') format('woff'),
-         url('../fonts/bangna-new-webfont.ttf') format('truetype');
+    src: url('asset/fonts/bangna-new-webfont.eot');
+    src: url('asset/fonts/bangna-new-webfont.eot?#iefix') format('embedded-opentype'),
+         url('asset/fonts/bangna-new-webfont.woff2') format('woff2'),
+         url('asset/fonts/bangna-new-webfont.woff') format('woff'),
+         url('asset/fonts/bangna-new-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
