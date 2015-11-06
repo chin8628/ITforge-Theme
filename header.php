@@ -30,38 +30,38 @@
 
 	<header id="masthead" class="site-header" role="banner">
 
-		<!--
-		<div class="site-branding">
-			<?php if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php endif; ?>
-			<p class="site-description"><?php bloginfo( 'description' ); ?></p>
-		</div>
-
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'itforge' ); ?></button>
-		</nav>
-		-->
-
 		<div class="menu col-md-8 col-md-offset-2">
 			<nav class="navbar navbar-default navbar-static-top">
 			  	<div>
 			    	<a href="/itforge" class="navbar-brand"><img id="logo" src="<?php bloginfo('template_directory'); ?>/asset/img/logo.png"></a>
 			    	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					    	<?php
-					    		require_once('inc/wp_bootstrap_navwalker.php');
-					    		$defaults = array(
-									'container'       => false,
-									'menu_class'      => 'nav navbar-nav',
-									'echo'            => true,
-									'fallback_cb'     => 'wp_page_menu',
-									'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-									'walker'          => new wp_bootstrap_navwalker()
-								);
-					    		wp_nav_menu($defaults);
-					    	?>
+				    	<?php
+				    		require_once('inc/wp_bootstrap_navwalker.php');
+				    		$defaults = array(
+								'container'       => false,
+								'menu_class'      => 'nav navbar-nav',
+								'echo'            => true,
+								'fallback_cb'     => 'wp_page_menu',
+								'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+								'walker'          => new wp_bootstrap_navwalker()
+							);
+				    		wp_nav_menu($defaults);
+				    	?>
+				    	<ul class="nav navbar-nav navbar-right">
+				    		<li class="search-expanding">
+				    			<a href="#">
+				    				<span class="glyphicon glyphicon-search icon-search" aria-hidden="true"></span>
+				    			</a>
+				    		</li>
+				    	</ul>
+				    	<!--
+				    	<form class="navbar-form" role="search">
+							<div class="form-group navbar-right">
+						  		<input type="search" class="form-control" placeholder="ค้นหา" name="s">
+							</div>
+						</form>
+						-->
+
 					</div>
 				</div>
 			</nav>
