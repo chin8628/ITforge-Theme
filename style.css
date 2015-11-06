@@ -168,7 +168,7 @@ hr.bold {
 }
 
 /* page css */
-.page{
+#primary #main .page{
     padding-top: 30px;
     padding-bottom: 30px;
 }
