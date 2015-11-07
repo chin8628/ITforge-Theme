@@ -87,7 +87,7 @@ hr.bold {
 
 .navbar-default .navbar-nav { color: black; }
 .navbar-default .navbar-nav > li > a { color: #777; }
-.navbar-default .navbar-nav > li > a:hover { color: #444; }
+.navbar-default .navbar-nav > li > a:hover { color: #222; }
 
 .navbar-nav .navbar-form{ margin-right: 15px; }
 .navbar-nav #icon-search{ font-size: 20px; }
