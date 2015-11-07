@@ -1,3 +1,6 @@
+/*-------------------------------------------------------
+## Import ##
+-------------------------------------------------------*/
 @font-face {
     font-family: 'bangna_newregular';
     src: url('asset/fonts/bangna-new-webfont.eot');
@@ -9,16 +12,14 @@
     font-style: normal;
 }
 
-/* Basic structure CSS */
+/*-------------------------------------------------------
+## Basic structure CSS ##
+-------------------------------------------------------*/
 body{
     height: 100%;
     background-color: #EEE;
 }
-
-#content{
-    margin-bottom: 3%;
-}
-
+#content{ margin-bottom: 3%; }
 #primary{
     background-color: white;
     margin-top: 15px;
@@ -27,83 +28,62 @@ body{
     border-color: #CCC;
     padding-bottom: 10px;
 }
-
 #main{
     margin-right: 10px;
     margin-left: 10px;
 }
-
 #logo{
     height: 30px;
     margin-top: -7px;
 }
 
+/*-------------------------------------------------------
+## Typography and decolation CSS ##
+-------------------------------------------------------*/
+p.title{ font-size: 1.1em; }
 .bangna{
     font-family: 'bangna_newregular';
     color: #ef7f24;
 }
-
-p.title{
-    font-size: 1.1em;
+hr.bold {
+    border: 0px;
+    height: 1px;
 }
 
+/*-------------------------------------------------------
+## Navbar CSS ##
+-------------------------------------------------------*/
 .menu{
     margin-top: 30px;
     margin-bottom: 10px;
     padding: 0;
 }
-
 .navbar-default{
     background-color: white;
     border: 1px;
     border-color: #BBB;
     border-style: solid;
 }
-
 .navbar-brand {
     margin-left: 0;
     background-color: white;
 }
 
-.navbar-default .navbar-brand:hover{
-    background-color: white;
-}
+.navbar-default .navbar-brand:hover{ background-color: white; }
 
-.navbar-default .navbar-nav {
-    color: black;
-}
+.navbar-default .navbar-nav { color: black; }
+.navbar-default .navbar-nav > li > a { color: #777; }
+.navbar-default .navbar-nav > li > a:hover { color: #444; }
 
-.navbar-default .navbar-nav > li > a {
-    color: #777;
-}
-
-.navbar-default .navbar-nav > li > a:hover {
-    color: #444;
-}
-
-.navbar .navbar-form{
-    margin-right: 15px;
-}
-
-/* search in navbar */
-#icon-search{
-    font-size: 20px;
-}
-
-#icon-search:hover{
-    cursor:pointer;
-}
-
-#search-expanding{
-    margin-right: 15px;
-}
-
-#search-expanding > a{
+.navbar-nav .navbar-form{ margin-right: 15px; }
+.navbar-nav #icon-search{ font-size: 20px; }
+.navbar-nav #icon-search:hover{ cursor:pointer; }
+.navbar-nav #search-expanding{ margin-right: 15px; }
+.navbar-nav #search-expanding > a{
     padding-top: 14px !important;
     padding-bottom: 11px !important;
 }
-
-#search-input{
+.navbar-nav #search-input{
     display: none;
     overflow: hidden;
     width: 0px;
@@ -111,24 +91,12 @@ p.title{
     margin-left: 3px;
 }
 
-/* sidebar css */
-.widget-area{
-    float: right;
-}
-
-/* index css */
-.box-category{
-    margin-top: 20px;
-}
-
-.box-article{
-    margin-bottom: 10px;
-}
-
-.index .box-article img{
-    margin-right: 20px;
-}
-
+/*-------------------------------------------------------
+## Index page CSS ##
+-------------------------------------------------------*/
+.box-category{ margin-top: 20px; }
+.box-category small{ color: #666; }
+.box-article{ margin-bottom: 10px; }
 .box-article img{
     min-height: 100px;
     min-width: 200px;
@@ -137,15 +105,8 @@ p.title{
     width: 100%;
     margin-bottom: 10px;
 }
-
-.box-category small{
-    color: #666;
-}
-
-.box-article section small{
-    margin-top: -10px;
-}
-
+.box-article section small{ margin-top: -10px; }
+.index .box-article img{ margin-right: 20px; }
 .slider{
     padding: 0;
     -webkit-box-shadow: 0px 1px 2px 1px #999;
@@ -153,50 +114,28 @@ p.title{
     box-shadow: 0px 1px 2px 1px #999;
 }
 
-/* footer css */
+/*-------------------------------------------------------
+## Footer CSS ##
+-------------------------------------------------------*/
 #colophon{
     margin-top: 20px;
     padding: 0;
 }
-
-.credit{
-    color: #777;
-}
-
-.credit a{
-    color: #777;
-}
-
+.credit{ color: #777; }
+.credit a{ color: #777; }
 .credit a:hover{
     color: #555;
     text-decoration: none;
 }
 
-/* Article css */
-.entry-header-single{
-    padding-bottom: 30px;
-}
-
+/*-------------------------------------------------------
+## Article CSS ##
+-------------------------------------------------------*/
+.entry-header-single{ padding-bottom: 30px; }
 .entry-content{
     font-size: 1.15em;
     line-height: 1.7em;
 }
-
-hr.style-eight {
-    text-align: center;
-    border: 0;
-    height: 1px;
-    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-    background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-    background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-}
-
-hr.bold {
-    border: 0px;
-    height: 1px;
-}
-
 .entry-header-single .feature-img{
     -webkit-box-shadow: 0px 1px 2px 1px #999;
     -moz-box-shadow: 0px 1px 2px 1px #999;
@@ -206,7 +145,9 @@ hr.bold {
     overflow: hidden;
 }
 
-/* page css */
+/*-------------------------------------------------------
+## Page CSS ##
+-------------------------------------------------------*/
 #primary #main .page{
     padding-top: 30px;
     padding-bottom: 30px;
