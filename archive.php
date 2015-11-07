@@ -36,7 +36,7 @@ get_header(); ?>
 
 					<section class="col-md-9 col-sm-9">
 						<a href="<?php the_permalink(); ?>">
-							<p><strong> <?php echo get_the_title(); ?> </strong></p>
+							<p class="title"><strong> <?php echo get_the_title(); ?> </strong></p>
 						</a>
 						<small><?php the_date(); ?></small>
 						<p>

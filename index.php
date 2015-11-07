@@ -52,7 +52,7 @@ get_header(); ?>
 				<div class="col-md-6 index">
 
 					<?php query_posts( array('category_name' => $category[$count], 'showposts' => 4) ); ?>
-					<h3> <?php single_cat_title() ?> </h3>
+					<h2 class="bangna"> <?php single_cat_title() ?> </h2>
 					<?php while ( have_posts() ) : the_post(); ?>
 						<div class="box-article row">
 							<?php if ( has_post_thumbnail() ) : ?>
