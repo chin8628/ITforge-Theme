@@ -14,10 +14,6 @@
 
 get_header(); ?>
 
-	<div class="slider col-md-8 col-md-offset-2 container">
-		<?php echo do_shortcode("[metaslider id=25]"); ?>
-	</div>
-
 	<div id="primary" class="content-area col-md-8 col-md-offset-2 container">
 		<main id="main" class="site-main" role="main">
 
