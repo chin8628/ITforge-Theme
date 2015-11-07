@@ -77,5 +77,8 @@
 	<div id="content" class="site-content">
 
 		<div class="slider col-md-8 col-md-offset-2 container">
-			<?php echo do_shortcode("[metaslider id=25]"); ?>
+			<!--
+				Paste usage code from MetaSlider here.
+				Warning!! Not short code. use php code.
+			-->
 		</div>
