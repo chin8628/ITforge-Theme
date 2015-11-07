@@ -33,7 +33,7 @@
 			<nav class="navbar navbar-default navbar-static-top">
 			  	<div class="container-fluid">
 			  		<div class="navbar-header">
-				      	<a href="" class="navbar-brand">
+				      	<a href="<?php echo get_site_url(); ?>" class="navbar-brand">
 					    	<img id="logo" src="<?php bloginfo('template_directory'); ?>/asset/img/logo.png">
 				      	</a>
 				      	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
