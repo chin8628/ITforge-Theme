@@ -130,6 +130,7 @@ p.title{
 }
 
 .box-article img{
+    min-width: 200px;
     min-height: 100px;
     max-width: 300px;
     max-height: 150px;
