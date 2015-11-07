@@ -55,13 +55,19 @@ get_header(); ?>
 					<h2 class="bangna"> <?php single_cat_title() ?> </h2>
 					<?php while ( have_posts() ) : the_post(); ?>
 						<div class="box-article row">
-							<?php if ( has_post_thumbnail() ) : ?>
-								<?php the_post_thumbnail(); ?>
-							<?php else: ?>
-								<img src="<?php bloginfo('template_directory'); ?>/asset/img/blank.jpg" />
-							<?php endif; ?>
-							<a href="<?php the_permalink(); ?>"><p><strong> <?php echo get_the_title(); ?> </strong></p></a>
-							<small><?php the_date(); ?></small>
+							<section class="col-md-6 col-sm-6">
+								<?php if ( has_post_thumbnail() ) : ?>
+									<?php the_post_thumbnail(); ?>
+								<?php else: ?>
+									<img src="<?php bloginfo('template_directory'); ?>/asset/img/blank.jpg" />
+								<?php endif; ?>
+							</section>
+							<section class="col-md-6 col-sm-6">
+								<a href="<?php the_permalink(); ?>">
+									<p class="title"><strong> <?php echo get_the_title(); ?> </strong></p>
+								</a>
+								<small><?php the_date(); ?></small>
+							</section>
 						</div>
 					<?php endwhile; ?>
 					<?php echo '<a href="'. get_category_link( $category_id[$count] ) .'">อ่านต่อ</a>'; ?>

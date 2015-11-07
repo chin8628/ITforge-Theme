@@ -40,6 +40,11 @@ body{
 
 .bangna{
     font-family: 'bangna_newregular';
+    color: #ef7f24;
+}
+
+p.title{
+    font-size: 1.1em;
 }
 
 .menu{
@@ -121,24 +126,23 @@ body{
 }
 
 .index .box-article img{
-    float: left;
     margin-right: 20px;
-    margin-left: 15px;
 }
 
 .box-article img{
-    width: 200px;
-    height: 100px;
+    min-height: 100px;
+    max-width: 300px;
+    max-height: 150px;
+    width: 100%;
     margin-bottom: 10px;
-}
-
-.box-category h3{
-    font-family: 'bangna_newregular';
-    color: #ef7f24;
 }
 
 .box-category small{
     color: #666;
+}
+
+.box-article section small{
+    margin-top: -10px;
 }
 
 .slider{
