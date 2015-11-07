@@ -18,7 +18,7 @@ get_header(); ?>
 
 				<?php get_template_part( 'template-parts/content', 'single' ); ?>
 
-				<hr class="style-eight"></hr>
+				<hr class="bold">
 
 				<h4>บทความที่เกี่ยวข้อง</h4>
 
@@ -34,7 +34,7 @@ get_header(); ?>
 				?>
 				</p>
 
-				<hr class="style-eight"></hr>
+				<hr class="bold">
 
 				<?php
 					// If comments are open or we have at least one comment, load up the comment template.
