@@ -22,51 +22,51 @@ get_header(); ?>
 			</header><!-- .page-header -->
 
 
-				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
+			<?php /* Start the Loop */ ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
-				<div class="box-article row">
-					<section class="col-md-3 col-sm-3">
-						<?php if ( has_post_thumbnail() ) : ?>
-							<?php the_post_thumbnail(); ?>
-						<?php else: ?>
-							<img src="<?php bloginfo('template_directory'); ?>/asset/img/blank.jpg" />
-						<?php endif; ?>
-					</section>
+			<div class="box-article row">
+				<section class="col-md-3 col-sm-3">
+					<?php if ( has_post_thumbnail() ) : ?>
+						<?php the_post_thumbnail(); ?>
+					<?php else: ?>
+						<img src="<?php bloginfo('template_directory'); ?>/asset/img/blank.jpg" />
+					<?php endif; ?>
+				</section>
 
-					<section class="col-md-9 col-sm-9">
-						<a href="<?php the_permalink(); ?>">
-							<p class="title"><strong> <?php echo get_the_title(); ?> </strong></p>
-						</a>
-						<small><?php the_date(); ?></small>
-						<p>
-						<?php
-							$content = get_the_content();
-							$limit = 500;
-							if (strlen($content) >= $limit) {
-								$content = substr($content, 0, $limit);
-								//ensure it will return string that isn't a fu*k string
-								echo strip_tags(substr($content, 0, strrpos($content, ' ')) . " [...]");
-							}
-						?>
-						</p>
-					</section>
-				</div>
+				<section class="col-md-9 col-sm-9">
+					<a href="<?php the_permalink(); ?>">
+						<p class="title"><strong> <?php echo get_the_title(); ?> </strong></p>
+					</a>
+					<small><?php the_date(); ?></small>
+					<p>
+					<?php
+						$content = get_the_content();
+						$limit = 500;
+						if (strlen($content) >= $limit) {
+							$content = substr($content, 0, $limit);
+							//ensure it will return string that isn't a fu*k string
+							echo strip_tags(substr($content, 0, strrpos($content, ' ')) . " [...]");
+						}
+					?>
+					</p>
+				</section>
+			</div>
 
-				<hr></hr>
+			<hr>
 
-				<?php endwhile; ?>
+			<?php endwhile; ?>
 
 			<p class="text-center">
-			<?php
-			 	$args = array(
-					'prev_text'          => __('« หน้าก่อนหน้านี้'),
-					'next_text'          => __('หน้าต่อไป »'),
-					'end_size'           => 3,
-					'mid_size'           => 4
-				);
-				echo paginate_links( $args );
-			?>
+				<?php
+				 	$args = array(
+						'prev_text'          => __('« หน้าก่อนหน้านี้'),
+						'next_text'          => __('หน้าต่อไป »'),
+						'end_size'           => 3,
+						'mid_size'           => 4
+					);
+					echo paginate_links( $args );
+				?>
 			</p>
 
 		<?php else : ?>
