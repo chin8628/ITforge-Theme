@@ -149,8 +149,9 @@ body{
 }
 
 /* footer css */
-footer{
+#colophon{
     margin-top: 20px;
+    padding: 0;
 }
 
 .credit{
