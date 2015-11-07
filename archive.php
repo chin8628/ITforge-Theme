@@ -44,7 +44,7 @@ get_header(); ?>
 					<p>
 					<?php
 						$content = get_the_content();
-						$limit = 500;
+						$limit = 600;
 						if (strlen($content) >= $limit) {
 							$content = substr($content, 0, $limit);
 							//ensure it will return string that isn't a fu*k string
