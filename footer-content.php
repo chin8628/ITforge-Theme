@@ -15,7 +15,12 @@
     <hr class="bold">
     <div class="site-info credit">
         <span>
-            Theme <strong>ITforge</strong>
+            <a href="https://www.facebook.com/itforgeclub" target="blank">
+                <img width="25px" src="<?php bloginfo('template_directory'); ?>/asset/img/facebook.png">
+            </a>
+            <a href="https://twitter.com/itforge" target="blank">
+                <img width="25px" src="<?php bloginfo('template_directory'); ?>/asset/img/twitter.png">
+            </a>
         </span>
         <p class="text-right" style="float: right">
             Create by <a href="http://www.cloudian.in.th" rel="designer">Cloudian Studio</a>
