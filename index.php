@@ -68,7 +68,7 @@ get_header(); ?>
 							</section>
 						</div>
 					<?php endwhile; ?>
-					<?php echo '<a href="'. get_category_link( $category_id[$count] ) .'">อ่านต่อ</a>'; ?>
+					<?php echo '<a href="'. get_category_link( $category_id[$count] ) .'">อ่านทั้งหมด</a>'; ?>
 
 				</div>
 
