@@ -9,48 +9,28 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area col-lg-8 col-lg-offset-2 container">
 		<main id="main" class="site-main" role="main">
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'itforge' ); ?></h1>
+					<h1 class="page-title"><?php esc_html_e( 'ขออภัย เราไม่พบหน้าเว็บที่คุณต้องการ', 'itforge' ); ?></h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'itforge' ); ?></p>
+					<p><?php esc_html_e( 'คุณน่าจะใส่ url หรืออะไรผิด! โปรดตรวจสอบแล้วลองใหม่อีกครั้ง หรือลองค้นหาสิ่งทีคุณต้องการ อย่าตระหนกไป ทุกคนย่อมมีพลาดกันบ้าง!', 'itforge' ); ?></p>
 
-					<?php get_search_form(); ?>
-
-					<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
-
-					<?php if ( itforge_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'itforge' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-						?>
-						</ul>
-					</div><!-- .widget -->
-					<?php endif; ?>
-
-					<?php
-						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'itforge' ), convert_smilies( ':)' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-					?>
-
-					<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
+					<form class="navbar-form" role="search" style="margin-top: 20px;">
+						<div class="form-group">
+					  		<input type="search" class="form-control" placeholder="ค้นหา" name="s">
+					  		<button type="submit" class="btn btn-primary">ค้นหา</button>
+						</div>
+					</form>
 
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
+
+			<?php require('footer-content.php'); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

@@ -11,18 +11,23 @@
 
 <section class="no-results not-found">
 	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'itforge' ); ?></h1>
+		<h1 class="page-title"><?php esc_html_e( 'ขออภัย ไม่เจอสิ่งที่คุณต้องการ', 'itforge' ); ?></h1>
 	</header><!-- .page-header -->
 
-	<div class="page-content">
+	<div class="page-content col-md-12">
 		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
 			<p><?php printf( wp_kses( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'itforge' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'itforge' ); ?></p>
-			<?php get_search_form(); ?>
+			<form class="navbar-form" role="search">
+				<p><?php esc_html_e( 'ขออภัย แต่เราหาสิ่งที่คุณต้องการไม่เจอ ความรักก็เช่นกัน ต้องการหาอย่างอื่นไหม ?', 'itforge' ); ?></p>
+				<div class="form-group">
+			  		<input type="search" class="form-control" placeholder="ค้นหา" name="s">
+			  		<button type="submit" class="btn btn-primary">ค้นหา</button>
+				</div>
+			</form>
 
 		<?php else : ?>
 

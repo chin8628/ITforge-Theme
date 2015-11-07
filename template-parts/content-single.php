@@ -10,7 +10,13 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+	<header class="entry-header-single">
+		<?php if ( has_post_thumbnail() ) { ?>
+		<div class="feature-img">
+			<?php the_post_thumbnail(); ?>
+		</div>
+		<?php } ?>
+
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 		<div class="entry-meta">
@@ -31,5 +37,6 @@
 	<footer class="entry-footer">
 		<?php itforge_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
+
 </article><!-- #post-## -->
 

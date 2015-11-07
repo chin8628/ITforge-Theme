@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area col-lg-8 col-lg-offset-2 container">
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
@@ -21,22 +21,55 @@ get_header(); ?>
 				?>
 			</header><!-- .page-header -->
 
+
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php
+			<div class="box-article row">
+				<section class="col-md-3 col-sm-3">
+					<a href="<?php the_permalink(); ?>">
+					<?php if ( has_post_thumbnail() ) : ?>
+						<?php the_post_thumbnail(); ?>
+					<?php else: ?>
+						<img src="<?php bloginfo('template_directory'); ?>/asset/img/blank.jpg" />
+					<?php endif; ?>
+					</a>
+				</section>
 
-					/*
-					 * Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'template-parts/content', get_post_format() );
-				?>
+				<section class="col-md-9 col-sm-9">
+					<a href="<?php the_permalink(); ?>">
+						<p class="title"><strong> <?php echo get_the_title(); ?> </strong></p>
+					</a>
+					<small><?php the_date(); ?></small>
+					<p>
+					<?php
+						$content = get_the_content();
+						$limit = 600;
+						if (strlen($content) >= $limit) {
+							$content = substr($content, 0, $limit);
+							//ensure it will return string that isn't a fu*k string
+							echo strip_tags(substr($content, 0, strrpos($content, ' ')) . " [...]");
+						}
+					?>
+					</p>
+				</section>
+			</div>
+
+			<hr>
 
 			<?php endwhile; ?>
 
-			<?php the_posts_navigation(); ?>
+			<p class="text-center">
+				<?php
+				 	$args = array(
+						'prev_text'          => __('« หน้าก่อนหน้านี้'),
+						'next_text'          => __('หน้าต่อไป »'),
+						'end_size'           => 3,
+						'mid_size'           => 4
+					);
+					echo paginate_links( $args );
+				?>
+			</p>
 
 		<?php else : ?>
 
@@ -44,8 +77,9 @@ get_header(); ?>
 
 		<?php endif; ?>
 
+		<?php require('footer-content.php'); ?>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
