@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area col-md-8 col-md-offset-2 container">
+	<div id="primary" class="content-area col-lg-8 col-lg-offset-2 container">
 		<main id="main" class="site-main" role="main">
 
 			<?php
