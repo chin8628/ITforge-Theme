@@ -31,8 +31,18 @@
 
 		<div class="menu col-md-8 col-md-offset-2">
 			<nav class="navbar navbar-default navbar-static-top">
-			  	<div>
-			    	<a href="/itforge" class="navbar-brand"><img id="logo" src="<?php bloginfo('template_directory'); ?>/asset/img/logo.png"></a>
+			  	<div class="container-fluid">
+			  		<div class="navbar-header">
+				      	<a href="" class="navbar-brand">
+					    	<img id="logo" src="<?php bloginfo('template_directory'); ?>/asset/img/logo.png">
+				      	</a>
+				      	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				        	<span class="sr-only">Toggle navigation</span>
+				        	<span class="icon-bar"></span>
+				        	<span class="icon-bar"></span>
+				        	<span class="icon-bar"></span>
+				      	</button>
+				    </div>
 			    	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				    	<?php
 				    		require_once('inc/wp_bootstrap_navwalker.php');
@@ -51,14 +61,13 @@
 				    			<a id="icon-search">
 				    				<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 				    			</a>
-				    			<form class="navbar-form" role="search" id="search-input">
+				    			<form class="navbar-form col-xs-12" role="search" id="search-input">
 									<div class="form-group navbar-right">
 								  		<input type="search" class="form-control" placeholder="ค้นหา" name="s">
 									</div>
 								</form>
 				    		</li>
 				    	</ul>
-
 					</div>
 				</div>
 			</nav>
