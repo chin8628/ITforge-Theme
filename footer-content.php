@@ -15,10 +15,10 @@
     <hr class="bold">
     <div class="site-info credit">
         <span>
-            <a href="https://www.facebook.com/itforgeclub" target="blank">
+            <a href="<!-- YOUR URL FACEBOOK PAGE -->" target="blank">
                 <img width="25px" src="<?php bloginfo('template_directory'); ?>/asset/img/facebook.png">
             </a>
-            <a href="https://twitter.com/itforge" target="blank">
+            <a href="<!-- YOUR URL TWITTER ACCOUNT -->" target="blank">
                 <img width="25px" src="<?php bloginfo('template_directory'); ?>/asset/img/twitter.png">
             </a>
         </span>
