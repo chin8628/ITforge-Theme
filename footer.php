@@ -22,5 +22,6 @@
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.nivo.slider.pack.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/search-expanding.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/script.js"></script>
 
 </html>
