@@ -56,11 +56,13 @@ get_header(); ?>
 					<?php while ( have_posts() ) : the_post(); ?>
 						<div class="box-article row">
 							<section class="col-md-6 col-sm-6">
+								<a href="<?php the_permalink(); ?>">
 								<?php if ( has_post_thumbnail() ) : ?>
 									<?php the_post_thumbnail(); ?>
 								<?php else: ?>
 									<img src="<?php bloginfo('template_directory'); ?>/asset/img/blank.jpg" />
 								<?php endif; ?>
+								</a>
 							</section>
 							<section class="col-md-6 col-sm-6">
 								<a href="<?php the_permalink(); ?>">

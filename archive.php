@@ -27,11 +27,13 @@ get_header(); ?>
 
 			<div class="box-article row">
 				<section class="col-md-3 col-sm-3">
+					<a href="<?php the_permalink(); ?>">
 					<?php if ( has_post_thumbnail() ) : ?>
 						<?php the_post_thumbnail(); ?>
 					<?php else: ?>
 						<img src="<?php bloginfo('template_directory'); ?>/asset/img/blank.jpg" />
 					<?php endif; ?>
+					</a>
 				</section>
 
 				<section class="col-md-9 col-sm-9">
