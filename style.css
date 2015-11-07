@@ -131,6 +131,7 @@ p.title{
 
 .box-article img{
     min-height: 100px;
+    min-width: 200px;
     max-width: 300px;
     max-height: 150px;
     width: 100%;
@@ -173,7 +174,6 @@ p.title{
 
 /* Article css */
 .entry-header-single{
-    padding-top: 30px;
     padding-bottom: 30px;
 }
 
