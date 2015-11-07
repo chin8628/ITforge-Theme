@@ -29,7 +29,7 @@
 
 	<header id="masthead" class="site-header" role="banner">
 
-		<div class="menu col-md-8 col-md-offset-2">
+		<div class="menu col-md-8 col-md-offset-2 container">
 			<nav class="navbar navbar-default navbar-static-top">
 			  	<div class="container-fluid">
 			  		<div class="navbar-header">
