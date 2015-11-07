@@ -77,6 +77,9 @@ if ( post_password_required() ) {
 		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'itforge' ); ?></p>
 	<?php endif; ?>
 
-	<?php comment_form(); ?>
+	<?php
+		$args = array( 'class_submit' => 'btn btn-default' );
+		comment_form( $args );
+	?>
 
 </div><!-- #comments -->
