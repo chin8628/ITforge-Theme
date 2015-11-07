@@ -4,7 +4,7 @@ Version: 1.0 - 12 November 2015 [Initial release]
 
 ### Installation
 
-1. Before install theme, You must install Meta Slider. It's just a plugin for create slide image on index.
+1. Before install theme, You must install Meta Slider (https://wordpress.org/plugins/ml-slider/). It's just a plugin for create slide image on index.
 2. To install this theme, It's simple. I think you have known before read this.
 
 ### Credits
