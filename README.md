@@ -8,6 +8,7 @@ Version: 1.0 - 12 November 2015 [Initial release]
 2. To install this theme, It's simple. I think you have known before read this.
 3. Go to MetaSlide plugin, Then create slider to get code usage and paste code on header.php to use slider.
 4. Setting Metaslider minimum width is 900. **I suggest you to set slider's template to Nivo Slider and set Navigation to hidden.**
+5. Edit link to your social contact (facebook, twitter) in footer-content.php
 
 ### Credits
 
