@@ -14,10 +14,12 @@
 
 get_header(); ?>
 
-    <!--
-        Paste usage code from MetaSlider here.
-        Warning!! Not short code. use php code.
-    -->
+    <div class="slider col-md-8 col-md-offset-2 container">
+        <!--
+            Paste usage code from MetaSlider here.
+            Warning!! Not short code. use php code.
+        -->
+    </div>
 
     <div id="primary" class="content-area col-lg-8 col-lg-offset-2 container">
         <main id="main" class="site-main" role="main">
