@@ -23,7 +23,7 @@
             </a>
         </span>
         <p class="text-right" style="float: right">
-            Create by <a href="http://www.cloudian.in.th" rel="designer">Cloudian Studio</a>
+            Created by <a href="http://www.cloudian.in.th" rel="designer">Cloudian Studio</a>
         </p>
     </div><!-- .site-info -->
 </footer><!-- #colophon -->
