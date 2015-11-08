@@ -26,59 +26,52 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 
-	<header id="masthead" class="site-header" role="banner">
+    <header id="masthead" class="site-header" role="banner">
 
-		<div class="menu col-md-8 col-md-offset-2 container">
-			<nav class="navbar navbar-default navbar-static-top">
-			  	<div class="container-fluid">
-			  		<div class="navbar-header">
-				      	<a href="<?php echo get_site_url(); ?>" class="navbar-brand">
-					    	<img id="logo" src="<?php bloginfo('template_directory'); ?>/asset/img/logo.png">
-				      	</a>
-				      	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-				        	<span class="sr-only">Toggle navigation</span>
-				        	<span class="icon-bar"></span>
-				        	<span class="icon-bar"></span>
-				        	<span class="icon-bar"></span>
-				      	</button>
-				    </div>
-			    	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				    	<?php
-				    		require_once('inc/wp_bootstrap_navwalker.php');
-				    		$defaults = array(
-								'container'       => false,
-								'menu_class'      => 'nav navbar-nav',
-								'echo'            => true,
-								'fallback_cb'     => 'wp_page_menu',
-								'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-								'walker'          => new wp_bootstrap_navwalker()
-							);
-				    		wp_nav_menu($defaults);
-				    	?>
-				    	<ul class="nav navbar-nav navbar-right">
-				    		<li id="search-expanding">
-				    			<a id="icon-search">
-				    				<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-				    			</a>
-				    			<form class="navbar-form col-xs-12" role="search" id="search-input">
-									<div class="form-group navbar-right">
-								  		<input type="search" class="form-control" placeholder="ค้นหา" name="s">
-									</div>
-								</form>
-				    		</li>
-				    	</ul>
-					</div>
-				</div>
-			</nav>
-		</div>
+        <div class="menu col-md-8 col-md-offset-2 container">
+            <nav class="navbar navbar-default navbar-static-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a href="<?php echo get_site_url(); ?>" class="navbar-brand">
+                            <img id="logo" src="<?php bloginfo('template_directory'); ?>/asset/img/logo.png">
+                        </a>
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <?php
+                            require_once('inc/wp_bootstrap_navwalker.php');
+                            $defaults = array(
+                                'container'       => false,
+                                'menu_class'      => 'nav navbar-nav',
+                                'echo'            => true,
+                                'fallback_cb'     => 'wp_page_menu',
+                                'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                                'walker'          => new wp_bootstrap_navwalker()
+                            );
+                            wp_nav_menu($defaults);
+                        ?>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li id="search-expanding">
+                                <a id="icon-search">
+                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                </a>
+                                <form class="navbar-form col-xs-12" role="search" id="search-input">
+                                    <div class="form-group navbar-right">
+                                        <input type="search" class="form-control" placeholder="ค้นหา" name="s">
+                                    </div>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
 
-	</header><!-- #masthead -->
+    </header><!-- #masthead -->
 
-	<div id="content" class="site-content">
-
-		<div class="slider col-md-8 col-md-offset-2 container">
-			<!--
-				Paste usage code from MetaSlider here.
-				Warning!! Not short code. use php code.
-			-->
-		</div>
+    <div id="content" class="site-content">
